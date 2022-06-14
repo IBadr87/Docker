@@ -67,7 +67,7 @@ def test_check_if_valid_password():
     expected2 = False
     
     input3 = "BONJOURRRRRR"
-    expected3 = True
+    expected3 = False
 
     result1 = check_if_valid_password(input1)
     assert expected1 == result1
