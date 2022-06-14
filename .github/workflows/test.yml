@@ -1,21 +1,21 @@
 name: test
 on: [push]
 jobs:
-  test_functions:
-  runs-on: ubuntu-latest
+  test_docker:
+    runs-on: ubuntu-latest
 
-  steps:
-  - uses: actions/checkout@v1
+    steps:
+    - uses: actions/checkout@v1
 
-  - name: run tests
-    run: |
-      pip install pytest
-      pytest    
+    - name: run tests
+      run: |
+        pip install pytest
+        pytest    
 
-  - name: build docker image
-    run: 
-      docker build -t test_functions .  
+    - name: build docker image
+      run: 
+        docker build -t test_functions .  
 
-  - name: run docker image
-    run: 
-      docker run test_functions
+    - name: run docker image
+      run: 
+        docker run test_functions
