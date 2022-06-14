@@ -29,7 +29,7 @@ def check_if_valid_password(password):
         return False
     return True
 
-result = check_if_valid_password("bonjourrrrrr")
+result = check_if_valid_password("bonjourrrr")
 if result == True:
     print("password is valid")
 else:

@@ -23,13 +23,13 @@ def test_count_char():
 
 def test_check_if_maj():
     input1 = "bonjour"
-    expected1 = 0
+    expected1 = False
 
     input2 = "BonJOur"
-    expected2 = 3
+    expected2 = False
     
     input3 = "BONJOUR"
-    expected3 = 7
+    expected3 = True
 
     result1 = check_if_maj(input1)
     assert expected1 == result1
@@ -42,13 +42,13 @@ def test_check_if_maj():
 
 def test_check_if_special():
     input1 = "bonjour"
-    expected1 = 0
+    expected1 = True
 
     input2 = "Bonjour!"
-    expected2 = 1
+    expected2 = False
     
     input3 = "Bon-jour*"
-    expected3 = 2
+    expected3 = False
 
     result1 = check_if_special(input1)
     assert expected1 == result1
@@ -77,4 +77,5 @@ def test_check_if_valid_password():
 
     result3 = check_if_valid_password(input3)
     assert expected3 == result3
+
     
