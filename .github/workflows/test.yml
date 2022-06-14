@@ -6,12 +6,12 @@ jobs:
   steps:
      -uses: actions/checkout@v1
      -name: run tests
-          run: |
-            pip install pytest
-            pytest
+        run: |
+          pip install pytest
+          pytest
      -name: build docker image
       run:
-            docker build -t test_functions.
+          docker build -t test_functions.
      -name: run docker image
       run:
-            docker run test_functions
+          docker run test_functions
