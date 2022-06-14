@@ -66,7 +66,7 @@ def test_check_if_valid_password():
     input2 = "Bonjour"
     expected2 = False
     
-    input3 = "Bonjourrrrrr"
+    input3 = "BONJOURRRRRR"
     expected3 = True
 
     result1 = check_if_valid_password(input1)
