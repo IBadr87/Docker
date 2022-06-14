@@ -47,7 +47,7 @@ def test_check_if_special():
     input2 = "Bonjour!"
     expected2 = 1
     
-    input3 = "Bon_jour*"
+    input3 = "Bon-jour*"
     expected3 = 2
 
     result1 = check_if_special(input1)
