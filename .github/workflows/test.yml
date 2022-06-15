@@ -14,14 +14,13 @@ jobs:
 
     - name: build docker image
       run: 
-        docker build -t test_functions .  
+        docker build -t ibrahimbadr/pytest-http .  
 
     - name: run docker image
       run: 
-        docker run test_function
+        docker run ibrahimbadr/pytest-http
         
     - name: push docker image
       run: 
-        echo "${{ secrets.HEMA }}" | docker login -u "ibrahimbadr" --password-stdin
-        docker push ibrahimbadr
-        
+        echo "${{ secrets.HEMA }}" | docker login -u "ibrahimbadr/pytest-http" --password-stdin
+        docker push ibrahimbadr/pytest-http
