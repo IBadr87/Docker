@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: run tests
-      run: |
+      run:  |
         pip install pytest
         pytest    
 
@@ -21,6 +21,6 @@ jobs:
         docker run ibrahimbadr/pytest-http
         
     - name: push docker image
-      run: 
+      run:  |
         docker login -u ${{secrets.username}} -p ${{secrets.password}}
         docker push ibrahimbadr/pytest-http
