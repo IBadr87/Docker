@@ -19,12 +19,6 @@ jobs:
     - name: run docker image
       run: 
         docker run ibrahimbadr/pytest-http
-        
-    - name: connect to secrets
-      run:  |
-        echo $HEMA
-      env:
-        HEMA: ${{secrets.HEMA}}
 
     - name: push docker image
       run:  |
