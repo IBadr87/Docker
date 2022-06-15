@@ -20,9 +20,13 @@ jobs:
       run: 
         docker run ibrahimbadr/pytest-http
         
-    - name: push docker image
+    - name: connect to secrets
       run:  |
         echo $HEMA
       env:
         HEMA: ${{secrets.HEMA}}
 
+    - name: push docker image
+      run:  |
+        docker login -u ${{secrets.username}} -p ${{secrets.password}}
+        docker push ibrahimbadr/pytest-http
