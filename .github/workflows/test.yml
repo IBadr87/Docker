@@ -18,4 +18,10 @@ jobs:
 
     - name: run docker image
       run: 
-        docker run test_functions
+        docker run test_function
+        
+    - name: push docker image
+      run: 
+        echo "${{ secrets.HEMA }}" | docker login -u "ibrahimbadr" --password-stdin
+        docker push ibrahimbadr
+        
