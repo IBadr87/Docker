@@ -22,5 +22,5 @@ jobs:
 
     - name: push docker image
       run:  |
-        docker login -u ${{secrets.Dockerhub_Tokens}} -p ${{secrets.DOCKER_PASSWORD}}
+        docker login -u ${{secrets.DOCKER_PASSWORD}} -p ${{secrets.DOCKER_PASSWORD}}
         docker push ibrahimbadr/pytest-http
