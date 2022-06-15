@@ -77,5 +77,3 @@ def test_check_if_valid_password():
 
     result3 = check_if_valid_password(input3)
     assert expected3 == result3
-
-    
