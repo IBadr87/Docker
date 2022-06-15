@@ -10,4 +10,4 @@ RUN apt-get install python3-pip -y
 
 COPY . .
 
-CMD ["python3", "test_functions.py"]
+CMD ["python3", "main.py"]
