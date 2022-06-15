@@ -22,5 +22,5 @@ jobs:
         
     - name: push docker image
       run: 
-        echo "${{ secrets.HEMA }}" | docker login -u "ibrahimbadr" --password-stdin
+        docker login -u ${{secrets.username}} -p ${{secrets.password}}
         docker push ibrahimbadr/pytest-http
